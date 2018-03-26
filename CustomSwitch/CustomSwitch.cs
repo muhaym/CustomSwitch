@@ -35,9 +35,9 @@ namespace CustomSwitch
             }
         }
 
-        public static readonly BindableProperty IsCustomProperty = BindableProperty.Create("IsCustomToggled", typeof(bool), typeof(CustomSwitch), false, BindingMode.TwoWay);
+        public static readonly BindableProperty IsCustomToggledProperty = BindableProperty.Create("IsCustomToggled", typeof(bool), typeof(CustomSwitch), false, BindingMode.TwoWay);
 
-        public EventHandler<CustomToggledEventArgs> CustomToggled { get; set; }
+        public event EventHandler<CustomToggledEventArgs> CustomToggled;
 
 
         public CustomSwitch()
